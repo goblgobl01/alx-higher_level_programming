@@ -17,3 +17,4 @@ def delete_at(my_list=None, idx=0):
         del my_list[idx]
 
     return my_list
+
