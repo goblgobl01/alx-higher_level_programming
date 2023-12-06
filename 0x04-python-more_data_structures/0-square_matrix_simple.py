@@ -1,8 +1,11 @@
-#!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    new_matrix = [[0 for _ in range(3)] for _ in range(3)]
-    for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
+    rows = len(matrix)
+    cols = len(matrix[0]) if rows > 0 else 0  # Assuming all rows have the same length
+
+    new_matrix = [[0 for _ in range(cols)] for _ in range(rows)]
+
+    for i in range(rows):
+        for j in range(cols):
             element = matrix[i][j]
             new_matrix[i][j] = element ** 2
     return new_matrix
