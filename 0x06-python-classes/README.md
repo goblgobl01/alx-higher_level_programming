@@ -1,0 +1,1 @@
+task 0x06-python-classes readme file this task was challenging but i think that i get the concept very well
