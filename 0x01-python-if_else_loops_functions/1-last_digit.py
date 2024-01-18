@@ -12,4 +12,3 @@ if n == 0:
     print(f"Last digit of {number} is  {n} and is zero")
 if n < 6 and n != 0:
     print(f"Last digit of {number} is  {n} and is less than 6 and not 0")
-
