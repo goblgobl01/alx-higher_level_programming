@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
+    """this is a function that list the argument passed to it"""
     import sys
     variable = sys.argv
     if len(variable) == 1:
