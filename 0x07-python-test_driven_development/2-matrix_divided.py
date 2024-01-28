@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 def matrix_divided(matrix, div):
+    """divide all the element on matrix"""
+
     for row in matrix:
         for i in row:
             if (type(i) != float and type(i) != int):
