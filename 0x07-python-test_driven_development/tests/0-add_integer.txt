@@ -1,0 +1,36 @@
+=================================
+    This is my test file 
+=================================
+
+=================================
+    The tests Cases
+=================================
+
+Test Cases
+    >>> add_function = __import__('0-add_integer').add_integer
+    >>> add_function(1,2)
+    3
+    >>> add_function(-1, -1)
+    -2
+    >>> add_function(1.2, 2.4)
+    3
+    >>> add_function(1.2, 1)
+    2
+    >>> add_function(1, 1.2)
+    2
+    >>> a = 1
+    >>> b = 2
+    >>> add_function(a, b)
+    3
+    >>> add_function("string", 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+    >>> add_function(1, "string")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+    >>> add_function("string", "string")
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
