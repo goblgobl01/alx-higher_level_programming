@@ -57,14 +57,12 @@ class Rectangle:
         Represents the rectangle with the # character.
         """
         if self.__width == 0 or self.__height == 0:
-            return ("")
-
-        rect = []
-        for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
-            if i != self.__height - 1:
-                rect.append("\n")
-        return ("".join(rect))
+            return ""
+        string = ((self.__width * "#") + "\n") * self.__height
+        return "".join(string[:-1])
 
     def __repr__(self):
-        
+        """
+        Return a printable a string of the width and height of the rectangle.
+        """
+        return f"Rectangle({self.__width}, {self.__height})"
