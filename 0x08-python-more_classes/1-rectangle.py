@@ -26,7 +26,6 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """this is a setter for the private attribute __width"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -35,7 +34,6 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """this is a setter for the private attribute __height"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
