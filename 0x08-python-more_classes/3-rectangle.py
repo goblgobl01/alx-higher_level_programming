@@ -58,5 +58,5 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        example = [((self.__width * "#") + "\n") * self.__height]
-        return "".join(example[:-1])
+        string = ((self.__width * "#") + "\n") * self.__height 
+        return "".join(string[:-1])
