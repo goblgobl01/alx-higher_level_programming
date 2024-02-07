@@ -26,6 +26,7 @@ class Student:
                     continue
                 dict[attributes] = getattr(self, attributes)
             return dict
+
     def reload_from_json(self, json):
         """
         a simple way desirialize json data.
