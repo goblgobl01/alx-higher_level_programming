@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """rectangle python module."""
-from .base import Base
+from models.base import Base
+
 
 class Rectangle(Base):
     """a class that define a rectangle."""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """class constructor."""
         super().__init__(id)
@@ -53,7 +55,6 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
-
 
     @property
     def x(self):
