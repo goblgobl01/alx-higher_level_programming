@@ -91,7 +91,11 @@ class Rectangle(Base):
     def display(self):
         """print representation of the rectangle to the stdout."""
         list = ""
+        if self.__y != 0:
+            list = list + ("\n" * self.__y)
         for i in range(self.__height):
+            if self.__x != 0:
+                list = list + (" " * self.__x)
             for j in range(self.__width):
                 list = list + "#"
             list = list + "\n"
