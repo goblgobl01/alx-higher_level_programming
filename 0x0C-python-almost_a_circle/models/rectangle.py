@@ -124,7 +124,7 @@ class Rectangle(Base):
                 self.__y = args[4]
 
         elif kwargs:
-            for key , value in kwargs.items():
+            for key, value in kwargs.items():
                 if key == "id":
                     self.id = value
                 if key == "width":
