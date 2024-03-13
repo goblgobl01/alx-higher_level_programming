@@ -1,0 +1,1 @@
+this is the readme file for the introductory my sql project hopes all goes well
