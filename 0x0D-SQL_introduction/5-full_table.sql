@@ -1,2 +1,2 @@
--- this script describe a table of a databases passed from the stdin.
-SHOW COLUMNS FROM first_table;
+-- print a description of the table.
+SHOW CREATE TABLE `first_table`;
