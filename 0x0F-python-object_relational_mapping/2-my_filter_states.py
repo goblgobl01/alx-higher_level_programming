@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-   this module select from the states form the state table
+    this module select from the states form the state table
     where the name start with "ARIZONA".
 """
 import MySQLdb
@@ -11,7 +11,8 @@ if __name__ == "__main__":
                          passwd=sys.argv[2],
                          db=sys.argv[3])
     cur = db.cursor()
-    query = f"SELECT * FROM states WHERE name LIKE BINARY '{sys.argv[4]}'"
+    query = f"""SELECT * FROM states WHERE name
+            LIKE BINARY '{sys.argv[4]}' ORDER BY id ASC"""
     cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
