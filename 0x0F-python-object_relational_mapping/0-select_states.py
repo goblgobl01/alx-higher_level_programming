@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-   this module select from the states form the state table
-   where the name start with N%.
+   this module select all the states whithin the states table and order them.
 """
 import MySQLdb
 import sys

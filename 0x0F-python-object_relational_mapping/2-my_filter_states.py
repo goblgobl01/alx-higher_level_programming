@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-    this module select from the states form the state table
-    where the name start with N%.
+   this module select from the states form the state table
+    where the name start with "ARIZONA".
 """
 import MySQLdb
 import sys
@@ -11,7 +11,8 @@ if __name__ == "__main__":
                          passwd=sys.argv[2],
                          db=sys.argv[3])
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%'")
+    query = f"SELECT * FROM states WHERE name LIKE BINARY '{sys.argv[4]}'"
+    cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
         print(row)
