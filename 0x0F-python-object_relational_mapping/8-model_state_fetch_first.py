@@ -17,4 +17,7 @@ if __name__ == "__main__":
     session = Session()
 
     first_object = session.query(State).first()
-    print(f"{first_object.id}: {first_object.name}")
+    if (first_object):
+        print(f"{first_object.id}: {first_object.name}")
+    else:
+        print("Nothing")
