@@ -18,4 +18,3 @@ if __name__ == "__main__":
 
     first_object = session.query(State).first()
     print(f"{first_object.id}: {first_object.name}")
-    
