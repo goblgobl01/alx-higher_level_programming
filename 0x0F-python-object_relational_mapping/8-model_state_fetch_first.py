@@ -5,8 +5,7 @@
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
-from sqlalchemy import text
-
+from sqlalchemy.orm import sessionmaker
 if __name__ == "__main__":
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'.format(
@@ -14,8 +13,9 @@ if __name__ == "__main__":
             sys.argv[2],
             sys.argv[3]),
         pool_pre_ping=True)
-    with engine.connect() as connection:
-        result = connection.execute(
-            text("SELECT id, name FROM states WHERE id = 1;"))
-        for row in result:
-            print(f"{row[0]}: {row[1]}")
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    first_object = session.query(State).first()
+    print(f"{first_object.id}: {first_object.name}")
+    
