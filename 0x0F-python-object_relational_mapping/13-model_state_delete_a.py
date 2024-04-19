@@ -21,3 +21,6 @@ if __name__ == "__main__":
     for row in all_object:
         session.delete(row)
         session.commit()
+
+    session.commit()
+    session.close()
